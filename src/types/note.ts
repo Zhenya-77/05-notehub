@@ -4,16 +4,13 @@ export interface Note {
   content: string;
   createdAt: string;
   updatedAt: string;
-  tag: string;
-}
-
-export interface GetNotes {
-  notes: Note[];
-  totalPages: number;
+  tag: NoteTag;
 }
 
 export interface NewNoteData {
   title: string;
   content?: string;
-  tag?: string;
+  tag: NoteTag;
 }
+
+export type NoteTag = "Todo" | "Work" | "Personal" | "Meeting" | "Shopping";

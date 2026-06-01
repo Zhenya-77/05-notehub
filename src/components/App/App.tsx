@@ -31,12 +31,17 @@ function App() {
     setIsOpenModal(false);
   };
 
+  const handleSearch = (value: string) => {
+    setInputValue(value);
+    setCurrentPage(1);
+  };
+
   const totalPages = data?.totalPages ?? 0;
 
   return (
     <div className={css.app}>
       <header className={css.toolbar}>
-        <SearchBox value={inputValue} onSearch={setInputValue} />
+        <SearchBox value={inputValue} onSearch={handleSearch} />
         {isSuccess && totalPages > 1 && (
           <Pagination
             totalPages={totalPages}

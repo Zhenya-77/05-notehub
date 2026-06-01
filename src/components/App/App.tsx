@@ -5,7 +5,7 @@ import Pagination from "../Pagination/Pagination";
 import css from "./App.module.css";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import SearchBox from "../SearchBox/Searchbox";
+import SearchBox from "../SearchBox/SearchBox";
 import { useDebounce } from "use-debounce";
 import NoteForm from "../NoteForm/NoteForm";
 

@@ -7,7 +7,7 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { useDebounce } from "use-debounce";
 import NoteForm from "../NoteForm/NoteForm";
-import SearchBox from "../blabalbal/SearchBox";
+import SearchBox from "../SearchBox/SearchBox";
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);

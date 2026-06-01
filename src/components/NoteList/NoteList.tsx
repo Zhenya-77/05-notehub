@@ -17,7 +17,7 @@ function NoteList({ notes }: NoteListProps) {
     },
   });
 
-  const handleDelete = (id) => deleteMutation.mutate(id);
+  const handleDelete = (id: string) => deleteMutation.mutate(id);
 
   return (
     <ul className={css.list}>

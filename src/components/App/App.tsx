@@ -3,11 +3,11 @@ import Modal from "../Modal/Modal";
 import NoteList from "../NoteList/NoteList";
 import Pagination from "../Pagination/Pagination";
 import css from "./App.module.css";
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import SearchBox from "../SearchBox/SearchBox";
 import { useDebounce } from "use-debounce";
 import NoteForm from "../NoteForm/NoteForm";
+import SearchBox from "../SearchBox/SearchBox";
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,6 +20,7 @@ function App() {
     queryKey: ["notes", currentPage, deboucedValue],
     queryFn: () =>
       fetchNotes({ page: currentPage, searchQuery: deboucedValue }),
+    placeholderData: keepPreviousData,
   });
 
   const openModal = () => {

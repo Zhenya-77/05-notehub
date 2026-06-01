@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { GetNotes, Note, NewNoteData } from "../types/notes";
+import type { GetNotes, Note, NewNoteData } from "../types/note";
 
 axios.defaults.baseURL = "https://notehub-public.goit.study/api";
 axios.defaults.headers.common.Authorization = `Bearer ${

@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage, type FormikHelpers } from "formik";
 import { useId } from "react";
 import * as Yup from "yup";
 import { createNote } from "../../services/noteService";
-import type { NewNoteData } from "../../types/notes";
+import type { NewNoteData } from "../../types/note";
 
 interface OrderFormValues {
   title: string;
